@@ -3,6 +3,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/profile.dart';
+import 'package:flutter_application_2/userprofile.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -33,8 +34,8 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: BackButton(),
-        backgroundColor: Colors.amberAccent,
+        // leading: BackButton(),
+        backgroundColor: Colors.blue,
         elevation: 40,
         actions: [
           Icon(icon),
@@ -45,12 +46,12 @@ class _HomePageState extends State<HomePage> {
       // bottomNavigationBar: BottomNavigationBar(
       //   currentIndex: _cureentindex,
       //   selectedFontSize: 15,
-      //   backgroundColor: Colors.amberAccent,
+      //   backgroundColor: Colors.blue,
       //   items: [
       //     BottomNavigationBarItem(
       //         icon: Icon(Icons.cabin),
       //         label: 'Home  ',
-      //         backgroundColor: Colors.amberAccent),
+      //         backgroundColor: Colors.blue),
       //     BottomNavigationBarItem(
       //         icon: Icon(Icons.mail),
       //         label: 'Mail',
@@ -99,7 +100,8 @@ class _HomePageState extends State<HomePage> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const ProfilePage()),
+                        builder: (context) => const ProfilePage(),
+                      ),
                     );
                   });
                 },
@@ -125,10 +127,10 @@ class _HomePageState extends State<HomePage> {
               decoration: InputDecoration(
                 labelText: 'Enter Email',
                 focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.amberAccent),
+                  borderSide: BorderSide(color: Colors.blue),
                 ),
                 enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.amberAccent),
+                  borderSide: BorderSide(color: Colors.blue),
                 ),
               ),
             ),
@@ -139,10 +141,10 @@ class _HomePageState extends State<HomePage> {
               decoration: InputDecoration(
                 labelText: 'Enter Password',
                 focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.amberAccent),
+                  borderSide: BorderSide(color: Colors.blue),
                 ),
                 enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.amberAccent),
+                  borderSide: BorderSide(color: Colors.blue),
                 ),
               ),
             ),
@@ -155,12 +157,13 @@ class _HomePageState extends State<HomePage> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const ProfilePage()),
+                      builder: (context) => const UserProfile(),
+                    ),
                   );
                 },
                 padding:
                     EdgeInsets.only(top: 10, bottom: 10, right: 10, left: 10),
-                color: Colors.amberAccent,
+                color: Colors.blue,
                 textColor: Colors.black,
                 child: Text(
                   'Click Here'.toUpperCase(),
