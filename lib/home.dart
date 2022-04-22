@@ -112,78 +112,122 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              'Login ',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Login ',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(10),
-            child: TextField(
-              decoration: InputDecoration(
-                labelText: 'Enter Email',
-                focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.blue),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.blue),
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: TextField(
+                decoration: InputDecoration(
+                  labelText: 'Name',
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.blue),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.blue),
+                  ),
                 ),
               ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(10),
-            child: TextField(
-              decoration: InputDecoration(
-                labelText: 'Enter Password',
-                focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.blue),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.blue),
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: TextField(
+                decoration: InputDecoration(
+                  labelText: 'Email',
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.blue),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.blue),
+                  ),
                 ),
               ),
             ),
-          ),
-          Container(
-            child: RaisedButton(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30)),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const UserProfile(),
-                    ),
-                  );
-                },
-                padding:
-                    EdgeInsets.only(top: 10, bottom: 10, right: 10, left: 10),
-                color: Colors.blue,
-                textColor: Colors.black,
-                child: Text(
-                  'Click Here'.toUpperCase(),
-                  style: TextStyle(fontSize: 10),
-                )),
-            // child: ElevatedButton(
-            //     style: ButtonStyle(),
-            //     onPressed: () {
-            //       setState(() {
-            //         Navigator.push(
-            //           context,
-            //           MaterialPageRoute(
-            //             builder: (context) => ProfilePage(),
-            //           ),
-            //         );
-            //       });
-            //     },
-            //     child: Text('Click')),
-          )
-        ],
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: TextField(
+                decoration: InputDecoration(
+                  labelText: 'Address',
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.blue),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.blue),
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: TextField(
+                decoration: InputDecoration(
+                  labelText: 'Location',
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.blue),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.blue),
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: TextField(
+                decoration: InputDecoration(
+                  labelText: 'Age',
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.blue),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.blue),
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              child: RaisedButton(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30)),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const UserProfile(),
+                      ),
+                    );
+                  },
+                  padding:
+                      EdgeInsets.only(top: 10, bottom: 10, right: 10, left: 10),
+                  color: Colors.blue,
+                  textColor: Colors.black,
+                  child: Text(
+                    'Click Here'.toUpperCase(),
+                    style: TextStyle(fontSize: 10),
+                  )),
+              // child: ElevatedButton(
+              //     style: ButtonStyle(),
+              //     onPressed: () {
+              //       setState(() {
+              //         Navigator.push(
+              //           context,
+              //           MaterialPageRoute(
+              //             builder: (context) => ProfilePage(),
+              //           ),
+              //         );
+              //       });
+              //     },
+              //     child: Text('Click')),
+            )
+          ],
+        ),
       ),
     );
   }
